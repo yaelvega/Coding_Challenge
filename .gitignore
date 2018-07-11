@@ -54,8 +54,3 @@ fabric.properties
 .idea/httpRequests
 
 .gradle/
-.idea/workspace.xml
-src/main/java/factorial/
-src/main/java/missingNumbers/scratch.java
-src/main/java/nPrime/
-src/test/
