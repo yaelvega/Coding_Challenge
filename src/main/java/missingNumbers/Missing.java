@@ -6,7 +6,25 @@ import java.util.List;
 public class Missing {
 
     static void missing(List<Integer> list) {
-        throw new UnsupportedOperationException("Waiting to be implemented");
+        int tmp, end;
+        boolean first = true;
+
+        tmp = list.get(0) + 1;
+        end = list.get(list.size() - 1);
+
+        do {
+            if(!list.contains(tmp)) {
+                if(first) {
+                    System.out.print(tmp);
+                    first = false;
+                } else {
+                    System.out.print(", " + tmp );
+                }
+            }
+            tmp++;
+        } while (tmp <= end);
+
+        System.out.println(" ;");
     }
 
 
