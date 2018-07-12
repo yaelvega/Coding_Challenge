@@ -3,7 +3,9 @@ package factorial;
 public class Factorial {
 
     static int factorial(int n) {
-        throw new UnsupportedOperationException("Waiting to be implemented");
+        if(n == 0 || n == 1)
+            return 1;
+        return n * factorial(n-1);
     }
 
     public static void main(String[] args) {
@@ -13,4 +15,3 @@ public class Factorial {
         System.out.println(factorial(factorial(3)));
     }
 }
-
