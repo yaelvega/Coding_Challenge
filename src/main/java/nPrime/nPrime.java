@@ -1,11 +1,36 @@
 package nPrime;
 
 import java.util.Scanner;
+import java.util.ArrayList;
 
 public class nPrime {
 
     static int nPrimeNumber(int N) {
-        throw new UnsupportedOperationException("Waiting to be implemented");
+        int count = 1;
+        int value = 2;
+
+        boolean isPrime;
+
+        ArrayList<Integer> primeList = new ArrayList<Integer>();
+
+        while(true) {
+            if(count == N)
+                return value;
+
+            primeList.add(value);
+
+            do {
+                isPrime = true;
+                value++;
+                for(Integer prime : primeList){
+                    if((value % prime) == 0){
+                        isPrime = false;
+                        break;
+                    }
+                }
+            } while (!isPrime);
+            count++;
+        }
     }
 
     public static void main(String[] args) {
